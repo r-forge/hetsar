@@ -1,0 +1,43 @@
+
+export(hetsar)
+
+import("plm") # import whole package
+import("pder") # idem
+#importFrom("plm", "plm")
+importFrom("plm", "pdim")
+#importFrom("plm", "model.matrix.plm")
+#importFrom("plm", "pmodel.response.plm")
+#import("trust")      # whole package: trim this
+import("trustOptim") # whole package: trim this
+importFrom("methods", "as")
+importFrom("stats", "nobs")
+importFrom("stats", "alias")
+importFrom("stats", "reshape")
+#importFrom("pder", "HousePricesUS")
+#importFrom("pder", "usaw49")
+importFrom("sandwich", "vcovHC") # import generic and associated methods so the vcovHC methods from pkg sandwich and plm do no mask each other
+importFrom("zoo", "index")       # --- same ---
+importFrom("nlme", "fixef")      # --- same ---
+importFrom("spdep", "listw2mat")
+#
+importFrom("grDevices", "heat.colors", "rainbow")
+importFrom("graphics", "abline", "axis", "barplot", "legend", "lines",
+           "plot", "points")
+importFrom("stats", "nlminb", "optim",
+           "approx", "as.formula", "coef", "coefficients",
+           "cor", "delete.response", "deviance", "df.residual",
+           "fitted", "formula", "lm", "lm.fit", "model.frame",
+           "model.matrix", "model.response", "na.omit",
+           "pchisq", "pf",
+           "pnorm", "printCoefmat", "pt", "resid", "residuals",
+           "terms", "update", "var", "vcov")
+importFrom("reshape", "cast", "melt")
+
+# hetsar
+S3method("summary", "hetsar")
+S3method("print", "summary.hetsar")
+#S3method("model.matrix", "hetsar")
+#S3method("pmodel.response", "hetsar")
+
+
+
