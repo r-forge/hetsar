@@ -47,7 +47,7 @@ fn_hsar <- function(l_data, method = "L-BFGS-B", l_bounds = NULL, ...) {
      # -------------------------------------------------------------------------- #
      # bounds
      if (is.null(l_bounds)) {
-          v_lb <- c(rep(-0.995, N), rep(-Inf, K * N), rep(0.01, N)) # (N(K+2),)
+          v_lb <- c(rep(-0.995, N), rep(-Inf, K * N), rep(0.001, N)) # (N(K+2),)
           v_ub <- c(rep( 0.995, N), rep( Inf, (K * N) + N))
      } else {
           v_lb_psi   <- l_bounds[["lb_psi"  ]] # (N,)
