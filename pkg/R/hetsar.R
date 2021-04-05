@@ -111,6 +111,10 @@ hetsar <- function(formula, data, w, na.action,
 
     ## ...and warning if nonconvergence!
 
+    ## return individual coefficents' variances too
+    indcoefvar.std <- RES$standard
+    indcoefvar.snd <- RES$sandwich
+    
     ## simply return coefs:
     #return(indcoef)
     
@@ -144,6 +148,8 @@ hetsar <- function(formula, data, w, na.action,
                     df.residual = df.residual, r.squared = r2,
                     model = model.frame(pmod),
                     sigma = NULL, indcoef = tcoef,
+                    indcoefvar.std = indcoefvar.std,
+                    indcoefvar.snd = indcoefvar.snd,
                     call = cl, pdim = pdim(pmod))
     #hsarmod <- structure(hsarmod, pmodel = pmodel)
     class(hsarmod) <- c("hetsar", "panelmodel")
