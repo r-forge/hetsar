@@ -1,0 +1,12 @@
+Package: hetsar
+Type: Package
+Title: Heterogeneous spatial panel estimation
+Version: 0.0-2
+Date: 2021-04-05
+Author: Michele Aquaro, Giovanni Millo
+Maintainer: Giovanni Millo <millogiovanni@gmail.com>
+Depends: R (>= 3.1.0)
+Imports: methods, stats, plm, pder, spdep, nlme, trustOptim, sandwich, zoo, reshape
+Suggests: splm
+Description: A package for the estimation of spatial panels with heterogeneous coefficients by maximum likelihood.
+License: GPL-2
